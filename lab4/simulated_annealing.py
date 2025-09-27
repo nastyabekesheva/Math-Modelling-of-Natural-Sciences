@@ -139,7 +139,6 @@ class SimulateAnnealingKnapsackSolver:
         return best_value, total_weight, indexes, iter_count
 
     def _objective(self, sol):
-        """Objective function: sum of values if weight <= max_weight, else 0."""
         total_weight = np.sum(self.weights[sol == 1])
         if total_weight > self.max_weight:
             return 0
